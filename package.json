@@ -1,7 +1,6 @@
 {
-  "name": "lib",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@benfeather/lit-starter",
+  "version": "1.0.0",
   "type": "module",
   "files": ["dist"],
   "main": "dist/index.js",
@@ -18,7 +17,7 @@
     "build:lit": "vite build",
     "build:types": "tsc --declaration --emitDeclarationOnly",
     "build:storybook": "storybook build --output-dir 'docs'",
-    "lint": "eslint . --fix --ext .ts,.json"
+    "lint": "eslint . --fix --ext .ts"
   },
   "dependencies": {
     "lit": "^3.1.2"
