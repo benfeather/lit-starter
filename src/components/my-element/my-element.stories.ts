@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/web-components'
 import { html } from 'lit'
-import { MyElement } from './my-element'
+import type { MyElement } from './my-element'
 
 import './my-element'
 

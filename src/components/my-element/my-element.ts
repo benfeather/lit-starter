@@ -1,10 +1,10 @@
 import { html, LitElement, unsafeCSS } from 'lit'
 import { customElement, property, state } from 'lit/decorators.js'
-// import styles from './my-element.scss?inline'
+import styles from './my-element.scss?inline'
 
 @customElement('my-element')
 export class MyElement extends LitElement {
-  // static styles = unsafeCSS(styles)
+  static styles = unsafeCSS(styles)
 
   @property() name = 'World'
 
