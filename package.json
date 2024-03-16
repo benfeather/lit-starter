@@ -1,41 +1,47 @@
 {
-  "name": "@benfeather/lit-starter",
-  "version": "1.0.0",
-  "type": "module",
-  "files": ["dist"],
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js"
-    }
-  },
-  "scripts": {
-    "start": "storybook dev -p 6006",
-    "build": "npm run build:lit && npm run build:types && npm run build:storybook",
-    "build:lit": "vite build",
-    "build:types": "tsc --declaration --emitDeclarationOnly",
-    "build:storybook": "storybook build --output-dir 'docs'",
-    "lint": "eslint . --fix --ext .ts"
-  },
-  "dependencies": {
-    "lit": "^3.1.2"
-  },
-  "peerDependencies": {
-    "lit": "^3.1.2"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^1.2.18",
-    "@storybook/addon-essentials": "^8.0.0",
-    "@storybook/addon-links": "^8.0.0",
-    "@storybook/blocks": "^8.0.0",
-    "@storybook/test": "^8.0.0",
-    "@storybook/web-components": "^8.0.0",
-    "@storybook/web-components-vite": "^8.0.0",
-    "sass": "^1.71.1",
-    "storybook": "^8.0.0",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.6"
-  }
+	"name": "@benfeather/lit-starter",
+	"version": "1.0.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"start": "storybook dev -p 6006",
+		"build": "npm run build:lit && npm run build:types && npm run build:storybook",
+		"build:lit": "vite build",
+		"build:types": "tsc --declaration --emitDeclarationOnly",
+		"build:storybook": "storybook build --output-dir docs",
+		"lint": "eslint . --fix --ext .ts,.js --ignore-path .gitignore --ignore-pattern dist"
+	},
+	"dependencies": {
+		"lit": "^3.1.2"
+	},
+	"peerDependencies": {
+		"lit": "^3.1.2"
+	},
+	"devDependencies": {
+		"@benfeather/browserslist-config": "latest",
+		"@benfeather/editor-config": "latest",
+		"@benfeather/eslint-config": "latest",
+		"@benfeather/prettier-config": "latest",
+		"@chromatic-com/storybook": "^1.2.18",
+		"@storybook/addon-essentials": "^8.0.0",
+		"@storybook/addon-links": "^8.0.0",
+		"@storybook/blocks": "^8.0.0",
+		"@storybook/test": "^8.0.0",
+		"@storybook/web-components": "^8.0.0",
+		"@storybook/web-components-vite": "^8.0.0",
+		"sass": "^1.71.1",
+		"storybook": "^8.0.0",
+		"typescript": "^5.4.2",
+		"vite": "^5.1.6"
+	}
 }

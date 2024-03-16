@@ -4,29 +4,29 @@ import styles from './my-element.scss?inline'
 
 @customElement('my-element')
 export class MyElement extends LitElement {
-  static styles = unsafeCSS(styles)
+	static styles = unsafeCSS(styles)
 
-  @property() name = 'World'
+	@property() name = 'World'
 
-  @state() count: number = 0
+	@state() count: number = 0
 
-  private _onClick() {
-    this.count++
-  }
+	private _onClick() {
+		this.count++
+	}
 
-  render() {
-    return html`
-      <h1>Hello, ${this.name}!</h1>
-      <button @click=${this._onClick} type="button">
-        Click Count: ${this.count}
-      </button>
-      <slot></slot>
-    `
-  }
+	render() {
+		return html`
+			<h1>Hello, ${this.name}!</h1>
+			<button @click=${this._onClick} type="button">
+				Click Count: ${this.count}
+			</button>
+			<slot></slot>
+		`
+	}
 }
 
 declare global {
-  interface HTMLElementTagNameMap {
-    'my-element': MyElement
-  }
+	interface HTMLElementTagNameMap {
+		'my-element': MyElement
+	}
 }
